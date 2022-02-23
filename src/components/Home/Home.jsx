@@ -3,8 +3,9 @@ import { useSelector } from 'react-redux'
 
 function Home() {
 
-  const state = useSelector(state => state.user)
-  console.log("working =>"+state);
+  const state = useSelector(state => state.t1);
+  console.log(state);
+
   return (
     <div>Home</div>
   )

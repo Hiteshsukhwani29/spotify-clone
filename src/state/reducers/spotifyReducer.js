@@ -1,14 +1,9 @@
-// const initialState = {
-//     user: null,
-//     playlists: [],
-//     playing: false,
-//     item: null
-// };
-
-const spotifyReducer = (state={}, action) => {
+const spotifyReducer = (state = {}, action) => {
     switch (action.type) {
         case 'set-user':
-            return JSON.stringify(action.payload);
+            return { ...state, user: action.payload };
+        case 'set-token':
+            return { ...state, token: action.payload };
         default: return state;
     }
 }

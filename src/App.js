@@ -25,6 +25,7 @@ function App() {
       spotify.getMe().then(user => {
         console.log(user);
         dispatch(actionCreators.setUser(user))
+        dispatch(actionCreators.setToken(_token))
       })
     }
   }, [])
