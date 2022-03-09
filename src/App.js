@@ -27,6 +27,10 @@ function App() {
         dispatch(actionCreators.setUser(user))
         dispatch(actionCreators.setToken(_token))
       })
+      spotify.getUserPlaylists().then((playlist) => {
+        dispatch(actionCreators.setPlaylist(playlist))
+      })
+
     }
   }, [])
 

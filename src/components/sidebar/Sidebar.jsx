@@ -6,8 +6,10 @@ import SearchIcon from '@material-ui/icons/Search';
 import LibraryIcon from '@material-ui/icons/LibraryMusic';
 import CreatePlaylistIcon from '@material-ui/icons/AddBox';
 import LikedIcon from '@material-ui/icons/Favorite';
+import { useSelector } from 'react-redux';
 
 function Sidebar() {
+  const state = useSelector(state => state.t1);
   return (
     <div className='min-h-screen flex-[0.2] bg-[#000000] min-w-[230px] text-white px-3'>
         <SpotifyLogo />
@@ -18,9 +20,9 @@ function Sidebar() {
         <SidebarOption Icon={CreatePlaylistIcon} Text="Create Playlist"/>
         <SidebarOption Icon={LikedIcon} Text="Liked Songs"/>
         <div className='h-[0.07px] mx-3 mt-2 bg-[#282828] mb-3'></div>
-        <SidebarOption Text="Jazz"/>
-        <SidebarOption Text="Hip Hop"/>
-        <SidebarOption Text="Mega Punjabi Hits"/>
+        {state.playlist?.items?.map(playlist => (
+          <SidebarOption Text={playlist.name}/>
+        ))}
     </div>
   )
 }

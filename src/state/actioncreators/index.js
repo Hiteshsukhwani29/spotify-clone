@@ -15,3 +15,12 @@ export const setToken = (token) =>{
         })
     }
 }
+
+export const setPlaylist = (playlist) =>{
+    return (dispatch) => {
+        dispatch({
+            type: 'set-playlist',
+            payload: playlist
+        })
+    }
+}

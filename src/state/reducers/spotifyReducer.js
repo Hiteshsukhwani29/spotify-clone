@@ -4,6 +4,8 @@ const spotifyReducer = (state = {}, action) => {
             return { ...state, user: action.payload };
         case 'set-token':
             return { ...state, token: action.payload };
+        case 'set-playlist':
+            return { ...state, playlist: action.payload };
         default: return state;
     }
 }
