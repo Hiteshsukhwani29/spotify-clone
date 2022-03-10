@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 *{
   margin: 0;
 }
