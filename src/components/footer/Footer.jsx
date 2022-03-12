@@ -6,7 +6,6 @@ import ShuffleIcon from '@material-ui/icons/Shuffle';
 import RepeatIcon from '@material-ui/icons/Repeat';
 import LyricsIcon from '@material-ui/icons/ChromeReaderMode';
 import QueueIcon from '@material-ui/icons/Queue';
-import ConnectIcon from '@material-ui/icons/CastConnected';
 import VolumeIcon from '@material-ui/icons/VolumeDown';
 import { Grid, Slider } from '@material-ui/core'
 
@@ -21,11 +20,11 @@ function Footer() {
         </div>
       </div>
       <div className='px-24 flex items-center justify-between max-w-sm flex-1'>
-        <ShuffleIcon />
-        <PrevIcon />
-        <PlayIcon fontSize="large" />
-        <NextIcon />
-        <RepeatIcon />
+        <ShuffleIcon fontSize='small' className='text-[#6a6a6a]' />
+        <PrevIcon className='text-gray hover:text-white' fontSize='medium' />
+        <PlayIcon fontSize="large" className='hover:scale-105' />
+        <NextIcon className='text-gray hover:text-white' fontSize='medium' />
+        <RepeatIcon className='text-[#6a6a6a]' fontSize='small' />
       </div>
       <div className='flex flex-1 items-center'>
         <Grid container spacing={2} justifyContent={'flex-end'}>

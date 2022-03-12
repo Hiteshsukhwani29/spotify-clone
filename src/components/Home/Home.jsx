@@ -4,7 +4,7 @@ import Footer from '../footer/Footer';
 import Sidebar from '../sidebar/Sidebar';
 import Player from './Player';
 
-function Home() {
+function Home({spotify}) {
 
   const state = useSelector(state => state.t1);
   console.log(state);
@@ -13,7 +13,7 @@ function Home() {
     <div className='home'>
       <div className="home-body flex">
         <Sidebar />
-        <Player/>
+        <Player spotify={spotify}/>
       </div>
       <div className="home-footer">
         <Footer/>
